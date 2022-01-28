@@ -3,6 +3,17 @@ import requests
 from bs4 import BeautifulSoup
 from openpyxl import Workbook, load_workbook
 
+
+# 嘗試區
+# r1 = requests.get('https://rate.bot.com.tw/xrt?Lang=zh-TW')
+# soup = BeautifulSoup(r1.text,'html.parser')
+# # for i in soup.find_all("div",{"class":"visible-phone print_hide"}):
+#   print(i.text)
+# for x in soup.find_all("td",{"class":"rate-content-cash text-right print_hide"}):
+#   print(x.text)
+# for a in soup.find_all("td",{"class":"rate-content-sight text-right print_hide"}):
+#   print(a.text)
+
 wb = Workbook()
 ws = wb.active
 title = ["幣別","現金匯率.本行買入","現金匯率.本行賣出","即期匯率.本行買入", "即期匯率.本行賣出"]
